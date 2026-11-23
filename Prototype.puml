@@ -1,0 +1,12 @@
+@startuml classDiagram
+title Prototype
+' Preenche os atributos mais comuns com valores default, armazenando um protótipo do objeto
+class Aluno implements Clonable{
+    + clone() : Aluno
+}
+class Endereco implements Clonable{
+    +clone() : Endereco
+}
+Aluno --> "1" Endereco
+
+@enduml
