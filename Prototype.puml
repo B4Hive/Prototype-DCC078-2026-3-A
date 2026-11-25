@@ -1,12 +1,13 @@
 @startuml classDiagram
 title Prototype
-' Preenche os atributos mais comuns com valores default, armazenando um protótipo do objeto
-class Aluno implements Clonable{
-    + clone() : Aluno
+' Cria cópias independentes de personagens e seus inventários
+
+class Personagem implements Cloneable {
+    + clone() : Personagem
 }
-class Endereco implements Clonable{
-    +clone() : Endereco
+class Inventario implements Cloneable {
+    + clone() : Inventario
 }
-Aluno --> "1" Endereco
+Personagem --> "1" Inventario
 
 @enduml
